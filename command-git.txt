@@ -1,0 +1,238 @@
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ git --version
+git version 2.43.0.windows.1
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ git config --global user.name "tohap"
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ git config --global user.email "tohappasaribu08@gmail.com"
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ git config --global user.email tohappasaribu08@gmail.com
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ git config --list
+diff.astextplain.textconv=astextplain
+filter.lfs.clean=git-lfs clean -- %f
+filter.lfs.smudge=git-lfs smudge -- %f
+filter.lfs.process=git-lfs filter-process
+filter.lfs.required=true
+http.sslbackend=openssl
+http.sslcainfo=C:/Program Files/Git/mingw64/etc/ssl/certs/ca-bundle.crt
+core.autocrlf=true
+core.fscache=true
+core.symlinks=false
+pull.rebase=false
+credential.helper=manager
+credential.https://dev.azure.com.usehttppath=true
+init.defaultbranch=master
+user.name=tohap
+user.email=tohappasaribu08@gmail.com
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ pwd
+/c/Users/ASUS ROG
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ cd..
+bash: cd..: command not found
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ dir
+-1.14-windows.xml
+AppData
+Application\ Data
+Contacts
+Cookies
+Documents
+Downloads
+Favorites
+Links
+Local\ Settings
+Music
+My\ Documents
+NTUSER.DAT
+NTUSER.DAT{0ceaf7ef-907a-11ed-b670-94d814f9a8b9}.TM.blf
+NTUSER.DAT{0ceaf7ef-907a-11ed-b670-94d814f9a8b9}.TMContainer00000000000000000001.regtrans-ms
+NTUSER.DAT{0ceaf7ef-907a-11ed-b670-94d814f9a8b9}.TMContainer00000000000000000002.regtrans-ms
+NetHood
+OneDrive
+Pictures
+PrintHood
+Recent
+Saved\ Games
+Searches
+SendTo
+Start\ Menu
+Templates
+Videos
+ansel
+node_modules
+ntuser.dat.LOG1
+ntuser.dat.LOG2
+ntuser.ini
+package-lock.json
+package.json
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ mkdir git_demo
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~
+$ cd git_demo/
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo
+$ pwd
+/c/Users/ASUS ROG/git_demo
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo
+$ mkdir FirstRepo
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo
+$ cd FirstRepo/
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo
+$ pwd
+/c/Users/ASUS ROG/git_demo/FirstRepo
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo
+$ git init
+Initialized empty Git repository in C:/Users/ASUS ROG/git_demo/FirstRepo/.git/
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ pwd
+/c/Users/ASUS ROG/git_demo/FirstRepo
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ cd..
+bash: cd..: command not found
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ cd...
+bash: cd...: command not found
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ cd...
+bash: cd...: command not found
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git init
+Reinitialized existing Git repository in C:/Users/ASUS ROG/git_demo/FirstRepo/.git/
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ touch alpha.txt
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ notepad alpha.txt
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        alpha.txt
+        desktop.ini
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git add .
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   alpha.txt
+        new file:   desktop.ini
+
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git commit ~m "beta gamma"
+error: pathspec '~m' did not match any file(s) known to git
+error: pathspec 'beta gamma' did not match any file(s) known to git
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git commit -m "beta gamma"
+[master (root-commit) 376d215] beta gamma
+ 2 files changed, 5 insertions(+)
+ create mode 100644 alpha.txt
+ create mode 100644 desktop.ini
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git log
+commit 376d215c73e9dee2bb94f7c33a08380cbe1f0331 (HEAD -> master)
+Author: tohap <tohappasaribu08@gmail.com>
+Date:   Sun Nov 26 23:41:37 2023 +0700
+
+    beta gamma
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ touch beta.txt
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ notepad beta.txt
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ notepad alpha.txt
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git status
+On branch master
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        modified:   alpha.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        beta.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git add .
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git commit -m "alpha gamma"
+[master 40eea2d] alpha gamma
+ 2 files changed, 2 insertions(+), 1 deletion(-)
+ create mode 100644 beta.txt
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git remote add origin https://github.com/Tohap08/FirstRepo.git
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git remote -v
+origin  https://github.com/Tohap08/FirstRepo.git (fetch)
+origin  https://github.com/Tohap08/FirstRepo.git (push)
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git push -u origin master
+fatal: unable to access 'https://github.com/Tohap08/FirstRepo.git/': Could not resolve host: github.com
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ git push -u origin master
+info: please complete authentication in your browser...
+Enumerating objects: 8, done.
+Counting objects: 100% (8/8), done.
+Delta compression using up to 16 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (8/8), 617 bytes | 308.00 KiB/s, done.
+Total 8 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Tohap08/FirstRepo.git
+ * [new branch]      master -> master
+branch 'master' set up to track 'origin/master'.
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$ ^C
+
+ASUS ROG@LAPTOP-BC6VJA2N MINGW64 ~/git_demo/FirstRepo (master)
+$
